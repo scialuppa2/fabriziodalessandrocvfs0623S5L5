@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2? family= Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500; 1.600;1.700;1.800 & display=scambia');
+@import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700; 1.900 & display=scambia');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+}
+main{
+    margin: 0 1.3em;
+}
+/*Barra navigazione*/
+nav{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    background-color: #ffc017;
+    border-bottom: 1px solid black;
+    z-index: 1000;
+}
+nav > div{
+    display: flex;
+    width: 95%;
+    height: auto;
+    justify-content: space-between;
+    padding: 1em;
+    
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    padding: 0.5em;
+    margin: 0.5em;
+
+}
+nav ul li:nth-child(1){
+    display: none;
+}
+nav ul li:nth-child(2){
+    display: none;
+}
+nav ul li:nth-child(3){
+    display: none;
+}
+nav ul li:nth-child(4){
+    display: none;
+}
+nav ul li:nth-child(5){
+    color: white;
+    background-color: #191919;
+    border-radius: 20px;
+    padding: 1em;
+}
+/*Media Query della Nav*/
+@media screen and (min-width:420px){
+    nav ul li:nth-child(4){
+        display: block;
+    }
+}
+@media screen and (min-width:520px){
+    nav ul li:nth-child(1){
+    display: block;
+}
+nav ul li:nth-child(2){
+    display: block;
+}
+nav ul li:nth-child(3){
+    display: block;
+}
+nav ul li{
+    list-style: none;
+    padding: 0.2em;
+    margin: 0.2em;
+}
+nav div{
+    justify-content: space-around;
+}
+}
+
+
+/*Header con titolo e spiegazione contenuti pagina*/
+#animationM{
+    display: none;
+}
+header{
+    background-color: #ffc017;
+    border-bottom: 1px solid #191919;
+}
+#titleContainer{
+    margin-top: 15%;
+    padding: 2em;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+#titleContainer div{
+    font-size: 2em;
+    padding-bottom: 1.5em;
+}
+#titleContainer button{
+    font-size: 1.5em;
+    color: white;
+    background-color: #191919;
+    border: #191919;
+    border-radius: 20px;
+    padding: 0.5em 0;
+    margin-bottom: 2em;
+}
+h1{
+    font-size: 6em;
+    font-family: 'Spectral', serif;
+    padding-bottom: 0.5em;
+}
+/*Media query header*/
+@media screen and (min-width:520px) {
+    header{
+        display: flex;
+    }
+    #titleContainer{
+        margin-top: 10%;
+    }
+    #animationM{
+        display: block;
+    }
+    
+}
+@media screen and (min-width:700px) {
+    #titleContainer{
+        margin-top: 5%;
+    }
+    
+}
+@media screen and (min-width:850px) {
+    #titleContainer button{
+        width: 40%;
+        font-size: 1.5em;
+        margin-bottom: 2em;
+    }
+    
+}
+/*prima sezione articoli*/
+.sezione1{
+    display: flex;
+    align-items: center;
+    margin: 1em;
+}
+.sezione1 div, .barraAutore div, h3{
+    font-weight: bold;
+}
+
+.articleContainer{
+    display: flex;
+    padding: 0.6em;
+    margin-bottom: 0.8em;
+}
+.articleContainer .numeroArticolo{
+    font-size: 2em;
+    font-weight: bold;
+    color: #eae0e0;
+}
+.articleContainer h2{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.barraAutore{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+.barraAutore div{
+    padding: 0 1em;
+    font-size: 0.9em;
+}
+.loghini{
+    width: 8%;
+    border-radius: 50px;
+}
+.dataArticolo{
+    display: flex;
+    justify-content: space-between;
+    color: #8b8686;
+    font-size: 0.9em;
+}
+.autoreTitoloData{
+    padding-left: 1em;
+    display:flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+/*media query Prima sezione articoli*/
+@media screen and (min-width:520px){
+    #primaSezione{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sezione1{
+        flex-basis: 100%;
+    }
+    .articleContainer{
+        flex-basis: 40%;
+    }
+}
+@media screen and (min-width:1100px){
+    #primaSezione{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #primaSezione .articleContainer{
+        flex-basis: 10%;
+    }
+}
+/*Sezione Intermedia*/
+.sezioneIntermedia ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+.sezioneIntermedia ul li{
+    list-style: none;
+    padding: 0.5em;
+    margin: 0.3em;
+    border: 1px solid #8b8686;
+    color: #8b8686;
+    font-size: 0.8em;
+}
+
+/*Altra sezione articoli*/
+#terzaSezione{
+    display: flex;
+    flex-direction: column;
+}
+.articleLeftContainer{
+    display:flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-basis: 80%;
+}
+.articleLeftContainer p{
+    color: #8b8686;
+    margin-bottom: 0.2em;
+
+}
+.articleLeftContainer h2{
+    font-size: 1.3em;
+    
+}
+.ritratto{
+    width: 12em;
+    height: 9.5em;
+}
+.dataArticoloSet{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #8b8686;
+    font-size: 0.8em;
+
+}
+/*Media query Seconda sezione articoli*/
+@media screen and (min-width:520px) {
+    main section:last-of-type{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+@media screen and (min-width:1100px){
+    #affiancaSezioni{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+}
